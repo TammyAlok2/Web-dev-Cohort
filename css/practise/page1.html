@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    nav {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 20px;
+      align-items: center;
+      background-color: #3b0c74;
+      color: white;
+    }
+
+    nav div ul {
+      display: flex;
+      list-style-type: none;
+      justify-content: space-between;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    nav div button {
+      padding: 5px 10px; /* padding: top-bottom left-right  best practise*/
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      align-items: center;
+    }
+    nav div button:hover {
+      background-color: #f72585;
+      padding: 6px 12px;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-around;
+      background-color: #3b0c74;
+      color: white;
+    }
+
+    .hero div img {
+      width: 100%;
+      border-radius: 20px;
+      object-fit: cover; /* Always check this on image */
+      box-shadow: 0 0 10px white; /* give this propert on image */
+    }
+    .hero div img:hover {
+      transform: rotate(360deg);
+      transition: all 3s;
+    }
+
+    .hero div {
+      margin: 10% 0px;
+      padding: 30px;
+      width: 100%;
+    }
+    .hero div h1 {
+      margin: 10px 0;
+      font-size: 32px;
+    }
+    .hero div p {
+      margin: 10px 0;
+      font-size: 20px;
+      padding: 2px 0;
+    }
+
+    .hero div button {
+      padding: 8px 16px; /* padding: top-bottom left-right  best practise*/
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      margin: 10px 0;
+    }
+    .hero div button:hover {
+      background-color: #f72585;
+      padding: 10px 20px;
+    }
+    .logo-text {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 32px;
+    }
+    .clients div img {
+      width: 120px;
+      object-fit: cover;
+      border: none;
+      border-radius: 5px;
+    }
+    .clients div img:hover {
+      scale: 1.3;
+    }
+    .clients {
+      margin: 20px 10%;
+      border: 1px solid black;
+      display: flex;
+      justify-content: space-between;
+
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+    .three-card {
+      display: flex;
+      margin: 20px 10%;
+      border: 1px solid black;
+      justify-content: space-between;
+      padding: 40px;
+      box-shadow: 0px 0px 10px black;
+    }
+    .three-card .card {
+      /*  first see about margin padding */
+      border: 1px solid black;
+      width: 30%;
+      border-radius: 15px;
+      text-align: center;
+      padding: 20px 10px;
+      box-shadow: 0px 0px 10px black;
+    }
+    .three-card .card:hover{
+        transform: scale(1.1);
+        transition: all 1s;
+    }
+    .card img {
+      width: 180px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .card h3 {
+      margin: 20px 0;
+    }
+    .card p {
+      margin: 20px 0;
+    }
+
+    /* media query */
+    @media screen and (min-width: 0) and (max-width: 480px) {
+      body {
+        background-color: pink;
+      }
+      .three-card {
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .three-card div {
+        width: 80%;
+      }
+    }
+
+    @media screen and (min-width: 480px) and (min-width: 1024) {
+      body {
+        background-color: red;
+      }
+    }
+  </style>
+  <body>
+    <nav>
+      <div>
+        <h1>Logo</h1>
+      </div>
+      <div>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Service</li>
+        </ul>
+      </div>
+      <div>
+        <button>Login</button>
+        <button>SignUp</button>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div>
+        <h1>Hero Title</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur
+          adipisci dolor temporibus fugit laborum explicabo minima error quam
+          vero, incidunt iste at ullam nihil sit veritatis obcaecati iusto
+          deserunt! Est aut reiciendis aliquam ratione repellat quaerat earum
+          expedita voluptates libero.
+        </p>
+        <button>Know More</button>
+      </div>
+      <div>
+        <img src="./img/hitesh-sir.jpeg" alt="" />
+      </div>
+    </section>
+
+    <h2 class="logo-text">Our Clients</h2>
+    <section class="clients">
+      <div><img src="./img/hitesh-sir.jpeg" alt="" /></div>
+      <div><img src="./img/hitesh-sir.jpeg" alt="" /></div>
+      <div><img src="./img/hitesh-sir.jpeg" alt="" /></div>
+      <div><img src="./img/hitesh-sir.jpeg" alt="" /></div>
+      <div><img src="./img/hitesh-sir.jpeg" alt="" /></div>
+    </section>
+
+    <section class="three-card">
+      <div class="card">
+        <img src="./img/card1.png" alt="" />
+        <h3>Card Title</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam
+          corporis veniam consequatur, ipsam porro ea cumque ullam sed quis.
+          Possimus!
+        </p>
+      </div>
+      <div class="card">
+        <img src="./img/card2.png" alt="" />
+        <h3>Card Title</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam
+          corporis veniam consequatur, ipsam porro ea cumque ullam sed quis.
+          Possimus!
+        </p>
+      </div>
+      <div class="card">
+        <img src="./img/card3.png" alt="" />
+        <h3>Card Title</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam
+          corporis veniam consequatur, ipsam porro ea cumque ullam sed quis.
+          Possimus!
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
